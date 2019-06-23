@@ -1,0 +1,7 @@
+{
+  "appId": "react.ionic.aws",
+  "appName": "React Ionic AWS",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build"
+}

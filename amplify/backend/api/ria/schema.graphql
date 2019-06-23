@@ -1,0 +1,21 @@
+type Person @model {
+ id: ID!
+ email: String!
+ name: String
+ missions: [ProjectMembership] @connection(name: "personProjectMembership")
+}
+
+type Project @model {
+  id: ID!
+  name: String!
+  status: String
+  message: String
+  squadMates: [ProjectMembership] @connection(name: "missionProjectMembership")
+}
+
+
+type ProjectMembership @model {
+  id: ID!
+  person: Person! @connection(name: "personProjectMembership")
+  mission: Project! @connection(name: "missionProjectMembership")
+}

@@ -6,7 +6,7 @@ export const getPerson = `query GetPerson($id: ID!) {
     id
     email
     name
-    missions {
+    projects {
       items {
         id
       }
@@ -25,7 +25,7 @@ export const listPersons = `query ListPersons(
       id
       email
       name
-      missions {
+      projects {
         nextToken
       }
     }
@@ -74,11 +74,11 @@ export const getProjectMembership = `query GetProjectMembership($id: ID!) {
       id
       email
       name
-      missions {
+      projects {
         nextToken
       }
     }
-    mission {
+    project {
       id
       name
       status
@@ -107,7 +107,7 @@ export const listProjectMemberships = `query ListProjectMemberships(
         email
         name
       }
-      mission {
+      project {
         id
         name
         status

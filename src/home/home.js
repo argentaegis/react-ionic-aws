@@ -36,26 +36,83 @@ class Home extends Component {
       }
     };
 
-    this.addPerson(personOneInput);
+    const personTwoInput = {
+      input: {
+        id: uuid(),
+        email: 'person2@mail.com',
+        name: 'Person Two'
+      }
+    };
+
+    const projectOneInput ={
+      input: {
+        id: uuid(),
+        name: 'Project One',
+      }
+    }
+
+    let person1;
+
+    this.addPerson(personOneInput).then( (rval) => {
+      person1 = rval;
+      this.addProject(projectOneInput).then((project1) => {
+
+        this.addMembership(person1, project1);
+      });
+    });
+    this.addPerson(personTwoInput);
   };
 
-  addPerson(input) {
+  async addPerson(input) {
     console.log('addPerson');
-    this.props.client.mutate({
+    let rval;
+    await this.props.client.mutate({
       mutation: gql(mutations.createPerson),
       variables: input
     }).then((result) => {
       console.log('createPerson returns');
       console.log(result);
+      rval = result;
     }).catch((err) => console.error(err));
+
+    return rval.data.createPerson;
   };
 
-  addProject(input) {
+  async addProject(input) {
+    console.log('addProject');
+    let rval;
 
+    await this.props.client.mutate({
+      mutation: gql(mutations.createProject),
+      variables: input
+    }).then((result) => {
+      console.log('createProject returns');
+      console.log(result);
+      rval = result;
+    }).catch((err) => console.error(err));
+
+    return rval.data.createProject;
   };
 
-  addMembership(person, project) {
+  async addMembership(person, project) {
+    console.log('addMembership');
+    console.log(person);
+    console.log(project);
+    const input = {
+      input: {
+        id: uuid(),
+        projectMembershipPersonId: person.id,
+        projectMembershipProjectId: project.id
+      }
+    };
 
+    return await this.props.client.mutate({
+      mutation: gql(mutations.createProjectMembership),
+      variables: input
+    }).then((result) => {
+      console.log('create membership returns');
+      console.log(result);
+    }).catch((err) => console.error(err));
   };
 
   render() {

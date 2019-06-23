@@ -6,7 +6,7 @@ export const onCreatePerson = `subscription OnCreatePerson {
     id
     email
     name
-    missions {
+    projects {
       items {
         id
       }
@@ -20,7 +20,7 @@ export const onUpdatePerson = `subscription OnUpdatePerson {
     id
     email
     name
-    missions {
+    projects {
       items {
         id
       }
@@ -34,7 +34,7 @@ export const onDeletePerson = `subscription OnDeletePerson {
     id
     email
     name
-    missions {
+    projects {
       items {
         id
       }
@@ -95,11 +95,11 @@ export const onCreateProjectMembership = `subscription OnCreateProjectMembership
       id
       email
       name
-      missions {
+      projects {
         nextToken
       }
     }
-    mission {
+    project {
       id
       name
       status
@@ -118,11 +118,11 @@ export const onUpdateProjectMembership = `subscription OnUpdateProjectMembership
       id
       email
       name
-      missions {
+      projects {
         nextToken
       }
     }
-    mission {
+    project {
       id
       name
       status
@@ -141,11 +141,11 @@ export const onDeleteProjectMembership = `subscription OnDeleteProjectMembership
       id
       email
       name
-      missions {
+      projects {
         nextToken
       }
     }
-    mission {
+    project {
       id
       name
       status

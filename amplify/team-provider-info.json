@@ -1,14 +1,14 @@
 {
     "ria": {
         "awscloudformation": {
-            "AuthRoleName": "react-ionic-aws-ria-20190622195353-authRole",
-            "UnauthRoleArn": "arn:aws:iam::042947441236:role/react-ionic-aws-ria-20190622195353-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::042947441236:role/react-ionic-aws-ria-20190622195353-authRole",
+            "AuthRoleName": "react-ionic-aws-ria-20190622223910-authRole",
+            "UnauthRoleArn": "arn:aws:iam::042947441236:role/react-ionic-aws-ria-20190622223910-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::042947441236:role/react-ionic-aws-ria-20190622223910-authRole",
             "Region": "us-east-1",
-            "DeploymentBucketName": "react-ionic-aws-ria-20190622195353-deployment",
-            "UnauthRoleName": "react-ionic-aws-ria-20190622195353-unauthRole",
-            "StackName": "react-ionic-aws-ria-20190622195353",
-            "StackId": "arn:aws:cloudformation:us-east-1:042947441236:stack/react-ionic-aws-ria-20190622195353/6aebaaf0-9551-11e9-85fb-0a7c2d2d58f6"
+            "DeploymentBucketName": "react-ionic-aws-ria-20190622223910-deployment",
+            "UnauthRoleName": "react-ionic-aws-ria-20190622223910-unauthRole",
+            "StackName": "react-ionic-aws-ria-20190622223910",
+            "StackId": "arn:aws:cloudformation:us-east-1:042947441236:stack/react-ionic-aws-ria-20190622223910/823fafa0-9568-11e9-9296-0a583df6bf38"
         }
     }
 }

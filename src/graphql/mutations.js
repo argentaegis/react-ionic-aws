@@ -6,7 +6,7 @@ export const createPerson = `mutation CreatePerson($input: CreatePersonInput!) {
     id
     email
     name
-    missions {
+    projects {
       items {
         id
       }
@@ -20,7 +20,7 @@ export const updatePerson = `mutation UpdatePerson($input: UpdatePersonInput!) {
     id
     email
     name
-    missions {
+    projects {
       items {
         id
       }
@@ -34,7 +34,7 @@ export const deletePerson = `mutation DeletePerson($input: DeletePersonInput!) {
     id
     email
     name
-    missions {
+    projects {
       items {
         id
       }
@@ -95,11 +95,11 @@ export const createProjectMembership = `mutation CreateProjectMembership($input:
       id
       email
       name
-      missions {
+      projects {
         nextToken
       }
     }
-    mission {
+    project {
       id
       name
       status
@@ -118,11 +118,11 @@ export const updateProjectMembership = `mutation UpdateProjectMembership($input:
       id
       email
       name
-      missions {
+      projects {
         nextToken
       }
     }
-    mission {
+    project {
       id
       name
       status
@@ -141,11 +141,11 @@ export const deleteProjectMembership = `mutation DeleteProjectMembership($input:
       id
       email
       name
-      missions {
+      projects {
         nextToken
       }
     }
-    mission {
+    project {
       id
       name
       status

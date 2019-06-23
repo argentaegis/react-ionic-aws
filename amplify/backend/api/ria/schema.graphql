@@ -2,7 +2,7 @@ type Person @model {
  id: ID!
  email: String!
  name: String
- missions: [ProjectMembership] @connection(name: "personProjectMembership")
+ projects: [ProjectMembership] @connection(name: "personProjectMembership")
 }
 
 type Project @model {
@@ -10,12 +10,12 @@ type Project @model {
   name: String!
   status: String
   message: String
-  squadMates: [ProjectMembership] @connection(name: "missionProjectMembership")
+  squadMates: [ProjectMembership] @connection(name: "projectProjectMembership")
 }
 
 
 type ProjectMembership @model {
   id: ID!
   person: Person! @connection(name: "personProjectMembership")
-  mission: Project! @connection(name: "missionProjectMembership")
+  project: Project! @connection(name: "projectProjectMembership")
 }

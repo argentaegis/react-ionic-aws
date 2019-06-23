@@ -17,13 +17,15 @@
     "aws-amplify": "^1.1.29",
     "aws-appsync": "^1.8.1",
     "aws-appsync-react": "^1.2.9",
+    "graphql-tag": "^2.10.1",
     "react": "^16.8.6",
     "react-apollo": "^2.5.8",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "recompose": "^0.30.0"
+    "recompose": "^0.30.0",
+    "uuidv4": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

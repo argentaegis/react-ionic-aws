@@ -19,6 +19,7 @@ const client = new AWSAppSyncClient({
   region: aws_exports.aws_appsync_region,
   auth: {
     type: AUTH_TYPE.API_KEY,
+    apiKey: aws_exports.aws_appsync_apiKey
     // jwtToken: async () => (await Auth.currentSession()).getAccessToken().getJwtToken(),
   },
 });

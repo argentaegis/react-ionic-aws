@@ -3,9 +3,12 @@ import {
   IonPage,
   IonHeader,
   IonTitle,
+  IonToolbar,
+  IonButton,
 } from '@ionic/react';
 import { compose } from 'recompose';
 import { withRouter } from 'react-router-dom';
+import {withApollo} from 'react-apollo';
 
 class Home extends Component {
 
@@ -13,16 +16,40 @@ class Home extends Component {
     super(props);
 
     this.state = {};
+
+    console.log('Home props');
+    console.log(props);
   }
+
+  addPerson() {
+
+  };
+
+  addProject() {
+
+  };
+
+  addMembership() {
+
+  };
 
   render() {
     return (
       <IonPage>
         <IonHeader>
-          <ionToolbar>
+          <IonToolbar>
             <IonTitle>Home</IonTitle>
-          </ionToolbar>
+          </IonToolbar>
         </IonHeader>
+        <IonButton>
+          Add Person
+        </IonButton>
+        <IonButton>
+          Add Project
+        </IonButton>
+        <IonButton>
+          Add Membership
+        </IonButton>
       </IonPage>
     )
   }
@@ -30,6 +57,6 @@ class Home extends Component {
 
 }
 
-export default compose(
-  withRouter,
-)(Home);
+let component = withApollo(Home);
+component = withRouter(component);
+export default component;
